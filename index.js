@@ -1,7 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+const path = require('path')
 const fs = require("fs");
+app.use(express.static(path.resolve(__dirname, './')))
 app.get("/", (req,res) => {
     fs.readFile("./index.html", (err, data) => {
       res.writeHead(200, {
@@ -12,9 +14,9 @@ app.get("/", (req,res) => {
       } else {
         res.end(data);
       }
-    });
+    })
   });
   
-  app.listen("520", () => {
-    console.log("app listen on 520");
+  app.listen("5200", () => {
+    console.log("app listen on 5200");
   });

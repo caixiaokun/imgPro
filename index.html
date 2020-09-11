@@ -1,114 +1,16 @@
 ﻿<!DOCTYPE HTML>
-<!-- saved from url=(0036)http://keleyi.com/keleyi/phtml/html5/25/ -->
+<!-- saved from url=(0036) /keleyi/phtml/html5/25/ -->
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="Author" content="蔡小坤和何冬娇">
+    <meta name="Author" content="蔡小坤和何冬娇的结婚照片">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="HandheldFriendly" content="true">
-    <meta name="description" content="蔡小坤和何冬娇婚纱照">
+    <meta name="description" content="蔡小坤和何冬娇的结婚照片">
     <meta name="keywords" content="canvas,3D,perspective,texturing,gallery">
-    <style>
-		#icon {
-			background: rgb(255, 144, 0); border-radius: 6px 0px 0px; transition:0.6s ease-in-out; left: 65px; top: 6px; width: 40px; height: 40px; overflow: hidden; position: relative; cursor: pointer; -moz-transition: all 0.6s ease-in-out 0s; -webkit-transition: all 0.6s ease-in-out 0s; -o-transition: all 0.6s ease-in-out 0s;
-		}
-		#icon div {
-			background: none; position: absolute;
-		}
-		#icon div:nth-child(1) {
-			border-width: 7px 0px 7px 8px; border-style: solid; border-color: transparent rgb(255, 255, 255); left: 20px; top: 50%; width: 0px; height: 0px; margin-top: -7px; position: absolute;
-		}
-		#icon div:nth-child(2) {
-			background: rgb(255, 255, 255); left: 12px; top: 50%; width: 8px; height: 6px; margin-top: -3px; position: absolute;
-		}
-		#nav {
-			top: 10px; width: 100px; height: 0px; position: absolute; -ms-user-select: none; -webkit-user-select: none; -moz-user-select: none;
-		}
-		#nav-switch {
-			display: none;
-		}
-		#nav .label {
-			display: block; cursor: pointer;
-		}
-		#nav .container {
-			transition:left 0.3s ease-in-out; left: -100px; width: 100%; position: absolute; -moz-transition: left 0.3s ease-in-out 0s; -webkit-transition: left 0.3s ease-in-out 0s; -o-transition: left 0.3s ease-in-out 0s;
-		}
-		#nav .container > div {
-			padding: 0px; width: 50%; float: left;
-		}
-		#nav .container .nav-on {
-			color: rgb(51, 51, 51); padding-left: 0px;
-		}
-		#nav .container .nav-off {
-			width: 40px; height: 40px; padding-right: 10px;
-		}
-		:checked#nav-switch + .label .container {
-			left: 10px;
-		}
-		:checked#nav-switch + .label #icon {
-			background: rgb(0, 101, 203); border-radius: 0px 0px 6px; transform: rotate(-180deg); -webkit-transform: rotate(-180deg); -moz-transform: rotate(-180deg); -o-transform: rotate(-180deg);
-		}
-		.title {
-			margin: 0px; padding: 0px; left: 170px; top: 2px; height: 40px; color: rgb(51, 51, 51); line-height: 40px; font-family: "Segoe UI Light", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 24px; font-weight: bold; white-space: nowrap; position: absolute; -ms-user-select: none; -webkit-user-select: none; -moz-user-select: none; -o-user-select: none; user-select: none;
-		}
-		.menu {
-			margin: 0px; padding: 0px; left: 0px; top: 6px; color: rgb(51, 51, 51); font-family: "Segoe UI Light", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 1em; font-weight: lighter; list-style-type: none; position: relative; cursor: pointer;
-		}
-		.menu li {
-			list-style: none; width: 100px; height: 40px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid; position: relative; cursor: pointer;
-		}
-		.menu a {
-			color: rgb(51, 51, 51); line-height: 40px; padding-left: 40px; text-decoration: none; display: block; position: relative;
-		}
-		.menu li a:hover {
-			background: rgb(255, 144, 0);
-		}
-		.menu li a:focus {
-			background: rgb(255, 144, 0);
-		}
-		.menu li a:active {
-			background: rgb(255, 144, 0);
-		}
-		#nav li::before {
-			top: 50%; margin-left: 10px; position: absolute; content: "";
-		}
-		#nav li::after {
-			top: 50%; margin-left: 10px; position: absolute; content: "";
-		}
-		#nav li a::before {
-			top: 50%; margin-left: 10px; position: absolute; content: "";
-		}
-		#nav li a::after {
-			top: 50%; margin-left: 10px; position: absolute; content: "";
-		}
-		#nav .home a::before {
-			border-width: 8px 7px; border-style: solid; border-color: transparent transparent rgb(51, 51, 51); left: 2px; margin-top: -16px;
-		}
-		#nav .home a::after {
-			border-width: 3px 4px 0px; border-style: solid; border-color: rgb(51, 51, 51) rgb(51, 51, 51) transparent; left: 4px; width: 2px; height: 4px; margin-top: 0px;
-		}
-		#nav .arrow a::before {
-			border-width: 7px 0px 7px 8px; border-style: solid; border-color: transparent rgb(51, 51, 51); left: 8px; margin-top: -7px;
-		}
-		#nav .arrow a::after {
-			background: rgb(51, 51, 51); left: 0px; width: 8px; height: 6px; margin-top: -3px;
-		}
-		#nav .back.arrow a::before {
-			border-width: 7px 8px 7px 0px; left: 0px;
-		}
-		#nav .back.arrow a::after {
-			left: 8px;
-		}
-		#nav .list a::before {
-			background: none; border-width: 6px 0px; border-style: double; border-color: rgb(51, 51, 51); left: 5px; top: 14px; width: 12px; height: 2px;
-		}
-		#nav .list a::after {
-			background: none; border-width: 6px 0px; border-style: double; border-color: rgb(51, 51, 51); left: 1px; top: 14px; width: 2px; height: 2px;
-		}
-
-	</style>
-    <title>nice</title>
+    <link href="res/slider-wb.css" rel="stylesheet">
+    <title>蔡小坤和何冬娇的结婚照片</title>
     <style>
         html
         {
@@ -133,272 +35,16 @@
             background: #fff;
         }
     </style>
-	<script type="text/javascript">
-		var ge1doot = ge1doot || {
-			json: null,
-			screen: null,
-			pointer: null,
-			camera: null,
-			loadJS: function (url, callback, data) {
-				if (typeof url == "string") url = [url];
-				var load = function (src) {
-					var script = document.createElement("script");
-						if (callback) {
-							if (script.readyState){
-								script.onreadystatechange = function () {
-									if (script.readyState == "loaded" || script.readyState == "complete"){
-										script.onreadystatechange = null;
-										if (--n === 0) callback(data || false);
-									}
-								}
-							} else {
-								script.onload = function() {
-									if (--n === 0) callback(data || false);
-								}
-							}
-						}
-						script.src = src;
-						document.getElementsByTagName("head")[0].appendChild(script);
-				}
-				for (var i = 0, n = url.length; i < n; i++) load(url[i]);
-			}
-		}
-
-		// ===== html/canvas container =====
-
-		ge1doot.Screen = function (setup) {
-			ge1doot.screen = this;
-			this.elem = document.getElementById(setup.container) || setup.container;
-			this.ctx = this.elem.tagName == "CANVAS" ? this.elem.getContext("2d") : false;
-			this.style = this.elem.style;
-			this.left = 0;
-			this.top = 0;
-			this.width = 0;
-			this.height = 0;
-			this.cursor = "default";
-			this.setup = setup;
-			this.resize = function () {
-				var o = this.elem;
-				this.width  = o.offsetWidth;
-				this.height = o.offsetHeight;
-				for (this.left = 0, this.top = 0; o != null; o = o.offsetParent) {
-					this.left += o.offsetLeft;
-					this.top  += o.offsetTop;
-				}
-				if (this.ctx) {
-					this.elem.width  = this.width;
-					this.elem.height = this.height;
-				}
-				this.setup.resize && this.setup.resize();
-			}
-			this.setCursor = function (type) {
-				if (type !== this.cursor && 'ontouchstart' in window === false) {
-					this.cursor = type;
-					this.style.cursor = type;
-				}
-			}
-			window.addEventListener('resize', function () {
-				ge1doot.screen.resize();
-			}, false);
-			!this.setup.resize && this.resize();
-		}
-
-		// ==== unified touch events handler ====
-
-		ge1doot.Pointer = function (setup) {
-			ge1doot.pointer = this;
-			var self        = this;
-			var body        = document.body;
-			var html        = document.documentElement;
-			this.setup      = setup;
-			this.screen     = ge1doot.screen;
-			this.elem       = this.screen.elem;
-			this.X          = 0;
-			this.Y          = 0;
-			this.Xi         = 0;
-			this.Yi         = 0;
-			this.bXi        = 0;
-			this.bYi        = 0;
-			this.Xr         = 0;
-			this.Yr         = 0;
-			this.startX     = 0;
-			this.startY     = 0;
-			this.scale      = 0;
-			this.wheelDelta = 0;
-			this.isDraging  = false;
-			this.hasMoved   = false;
-			this.isDown     = false;
-			this.evt        = false;
-			var sX          = 0;
-			var sY          = 0;
-			// prevent default behavior
-			if (setup.tap) this.elem.onclick = function () { return false; }
-			if (!setup.documentMove) {
-				document.ontouchmove = function(e) { e.preventDefault(); }
-			}
-			document.addEventListener("MSHoldVisual", function(e) { e.preventDefault(); }, false);
-			if (typeof this.elem.style.msTouchAction != 'undefined') this.elem.style.msTouchAction = "none";
-
-			this.pointerDown = function (e) {
-				if (!this.isDown) {
-					if (this.elem.setCapture) this.elem.setCapture();
-					this.isDraging = false;
-					this.hasMoved = false;
-					this.isDown = true;
-					this.evt = e;
-					this.Xr = (e.clientX !== undefined ? e.clientX : e.touches[0].clientX);
-					this.Yr = (e.clientY !== undefined ? e.clientY : e.touches[0].clientY);
-					this.X  = sX = this.Xr - this.screen.left;
-					this.Y  = sY = this.Yr - this.screen.top + ((html && html.scrollTop) || body.scrollTop);
-					this.setup.down && this.setup.down(e);
-				}
-			}
-			this.pointerMove = function(e) {
-				this.Xr = (e.clientX !== undefined ? e.clientX : e.touches[0].clientX);
-				this.Yr = (e.clientY !== undefined ? e.clientY : e.touches[0].clientY);
-				this.X  = this.Xr - this.screen.left;
-				this.Y  = this.Yr - this.screen.top + ((html && html.scrollTop) || body.scrollTop);
-				if (this.isDown) {
-					this.Xi = this.bXi + (this.X - sX);
-					this.Yi = this.bYi - (this.Y - sY);
-				}
-				if (Math.abs(this.X - sX) > 11 || Math.abs(this.Y - sY) > 11) {
-					this.hasMoved = true;
-					if (this.isDown) {
-						if (!this.isDraging) {
-							this.startX = sX;
-							this.startY = sY;
-							this.setup.startDrag && this.setup.startDrag(e);
-							this.isDraging = true;
-						} else {
-							this.setup.drag && this.setup.drag(e);
-						}
-					} else {
-						sX = this.X;
-						sY = this.Y;
-					}
-				}
-				this.setup.move && this.setup.move(e);
-			}
-			this.pointerUp = function(e) {
-				this.bXi = this.Xi;
-				this.bYi = this.Yi;
-				if (!this.hasMoved) {
-					this.X = sX;
-					this.Y = sY;
-					this.setup.tap && this.setup.tap(this.evt);
-				} else {
-					this.setup.up && this.setup.up(this.evt);
-				}
-				this.isDraging = false;
-				this.isDown = false;
-				this.hasMoved = false;
-				this.setup.up && this.setup.up(this.evt);
-				if (this.elem.releaseCapture) this.elem.releaseCapture();
-				this.evt = false;
-			}
-			this.pointerCancel = function(e) {
-				if (this.elem.releaseCapture) this.elem.releaseCapture();
-				this.isDraging = false;
-				this.hasMoved = false;
-				this.isDown = false;
-				this.bXi = this.Xi;
-				this.bYi = this.Yi;
-				sX = 0;
-				sY = 0;
-			}
-			if ('ontouchstart' in window) {
-				this.elem.ontouchstart      = function (e) { self.pointerDown(e); return false;  }
-				this.elem.ontouchmove       = function (e) { self.pointerMove(e); return false;  }
-				this.elem.ontouchend        = function (e) { self.pointerUp(e); return false;    }
-				this.elem.ontouchcancel     = function (e) { self.pointerCancel(e); return false;}
-			}
-			document.addEventListener("mousedown", function (e) {
-				if (
-					e.target === self.elem || 
-					(e.target.parentNode && e.target.parentNode === self.elem) || 
-					(e.target.parentNode.parentNode && e.target.parentNode.parentNode === self.elem)
-				) {
-					if (typeof e.stopPropagation != "undefined") {
-						e.stopPropagation();
-					} else {
-						e.cancelBubble = true;
-					}
-					e.preventDefault();
-					self.pointerDown(e); 
-				}
-			}, false);
-			document.addEventListener("mousemove", function (e) { self.pointerMove(e); }, false);
-			document.addEventListener("mouseup",   function (e) {
-				self.pointerUp(e);
-			}, false);
-			document.addEventListener('gesturechange', function(e) {
-				e.preventDefault();
-				if (e.scale > 1) self.scale = 0.1; else if (e.scale < 1) self.scale = -0.1; else self.scale = 0;
-				self.setup.scale && self.setup.scale(e);
-				return false;
-			}, false);
-			if (window.navigator.msPointerEnabled) {
-				var nContact = 0;
-				var myGesture = new MSGesture();
-				myGesture.target = this.elem;
-				this.elem.addEventListener("MSPointerDown", function(e) {
-					if (e.pointerType == e.MSPOINTER_TYPE_TOUCH) {
-						myGesture.addPointer(e.pointerId);
-						nContact++;
-					}
-				}, false);
-				this.elem.addEventListener("MSPointerOut", function(e) {
-					if (e.pointerType == e.MSPOINTER_TYPE_TOUCH) {
-						nContact--;
-					}
-				}, false);
-				this.elem.addEventListener("MSGestureHold", function(e) {
-					e.preventDefault();
-				}, false);
-				this.elem.addEventListener("MSGestureChange", function(e) {
-					if (nContact > 1) {
-						if (e.preventDefault) e.preventDefault(); 
-						self.scale = e.velocityExpansion;
-						self.setup.scale && self.setup.scale(e);
-					}
-					return false;
-				}, false);
-			}
-			if (window.addEventListener) this.elem.addEventListener('DOMMouseScroll', function(e) { 
-				if (e.preventDefault) e.preventDefault(); 
-				self.wheelDelta = e.detail * 10;
-				self.setup.wheel && self.setup.wheel(e);
-				return false; 
-			}, false); 
-			this.elem.onmousewheel = function () { 
-				self.wheelDelta = -event.wheelDelta * .25;
-				self.setup.wheel && self.setup.wheel(event);
-				return false; 
-			}
-		}
-		// ===== request animation frame =====
-
-		window.requestAnimFrame = (function(){
-		return  window.requestAnimationFrame || 
-		window.webkitRequestAnimationFrame   || 
-		window.mozRequestAnimationFrame      || 
-		window.oRequestAnimationFrame        || 
-		window.msRequestAnimationFrame       || 
-		function( run ){
-			window.setTimeout(run, 16);
-		};
-})();
-	</script>
+    <script type="text/javascript" src="res/ge1doot.js"></script>
     <script type="text/javascript">
         /* 
         * ==============================================================
         * CANVAS 3D experiment - 
-        * http://keleyi.com/
+        *  /
         * Author Gerard Ferrandez - 7 June 2010
         * ------------------------------------------------------------
         * Javascript released under the MIT license
-        * http://keleyi.com
+        *  
         * Last updated: 12 Dec 2012
         * ===============================================================
         */
@@ -623,7 +269,7 @@
                 load: function (data) {
                     window.addEventListener('load', function () {
                         ge1doot.loadJS(
-					"./res/imageTransform3D.js",
+					"res/imageTransform3D.js",
 					init, data
 				);
                     }, false);
@@ -744,7 +390,6 @@
 </script>
 </head>
 <body>
-<a href="http://keleyi.com/a/bjac/g039tue3.htm" target="_blank">原文</a><br />
-    <canvas id="canvas">你的浏览器不支持HTML5画布技术，请使用支持HTML5的浏览器(http://keleyi.com/a/bjac/g039tue3.htm)</canvas>
+    <canvas id="canvas">你的浏览器不支持HTML5画布技术，请使用支持HTML5的浏览器( /a/bjac/g039tue3.htm)</canvas>
 </body>
 </html>

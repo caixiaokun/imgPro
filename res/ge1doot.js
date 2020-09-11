@@ -1,9 +1,9 @@
 ////////////////////////////////////////////////////////////
 // ============= micro HTML5 library =====================
-// @author Gerard Ferrandez / http://keleyi.com/
+// @author Gerard Ferrandez /  /
 // last update: May 27, 2013
 // Released under the MIT license
-// http://keleyi.com
+//  
 ////////////////////////////////////////////////////////////
 
 // ===== ge1doot global =====
