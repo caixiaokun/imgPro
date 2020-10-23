@@ -6,7 +6,8 @@ const config = {
   host: '81.71.0.238',
   port: 22,
   username: 'root',
-  password: 'CXK8297883..'
+  password: 'CXK8297883..',
+  exclude: ['node_modules'],
 }
 
 function upload(path, remoteDir) {
